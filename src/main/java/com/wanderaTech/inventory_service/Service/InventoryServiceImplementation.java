@@ -2,7 +2,9 @@ package com.wanderaTech.inventory_service.Service;
 
 import com.wanderaTech.common_events.productEvent.ProductCreatedEvent;
 import com.wanderaTech.common_events.productEvent.StockReduceEvent;
+import com.wanderaTech.inventory_service.InventoryDto.InventoryResponse;
 import com.wanderaTech.inventory_service.InventoryDto.InventoryRestockRequest;
+import com.wanderaTech.inventory_service.InventoryDto.UpdateRequest;
 import com.wanderaTech.inventory_service.Model.Inventory;
 import com.wanderaTech.inventory_service.Repository.InventoryRepository;
 import jakarta.transaction.Transactional;
@@ -11,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Slf4j
